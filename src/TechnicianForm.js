@@ -42,9 +42,9 @@ export const TechnicianForm = () => {
     const response = await fetch(createTechUrl, fetchConfig);
 
     if (response.ok) {
-      alert("Created a new technician");
+      // alert("Created a new technician");
     } else {
-      alert("Failed to create a new technician");
+      // alert("Failed to create a new technician");
     }
 
     // Reset form
