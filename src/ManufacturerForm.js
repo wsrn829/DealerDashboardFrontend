@@ -21,10 +21,12 @@ export default function ManufacturerForm() {
   const manufacturerURL = `${baseUrl}manufacturers/`;
   const fetchConfig = {
     method: "post",
+    mode: 'cors',
     body: JSON.stringify(data),
     headers: {
       "Content-Type": "application/json",
     },
+    body: JSON.stringify(newAutoData),
   };
 
   const handleSubmit = async (event) => {

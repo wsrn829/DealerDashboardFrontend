@@ -62,10 +62,11 @@ export const AppointmentForm = () => {
     const createAppointmentUrl = `${baseUrl}appointments/`;
     const fetchConfig = {
       method: "post",
-      body: JSON.stringify(newAppointmentData),
+      mode: 'cors',
       headers: {
         "Content-type": "application/json",
       },
+      body: JSON.stringify(newAppointmentData),
     };
 
     const response = await fetch(createAppointmentUrl, fetchConfig);

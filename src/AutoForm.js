@@ -34,10 +34,11 @@ export const AutoForm = () => {
     const createAutomobileUrl = `${baseUrl}automobiles/`;
     const fetchConfig = {
       method: "post",
-      body: JSON.stringify(newAutoData),
+      mode: 'cors',
       headers: {
         "Content-type": "application/json",
       },
+      body: JSON.stringify(newAutoData),
     };
 
     const response = await fetch(createAutomobileUrl, fetchConfig);

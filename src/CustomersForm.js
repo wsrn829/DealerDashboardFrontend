@@ -42,10 +42,12 @@ export default function CustomersForm({ getCustomers }) {
         const customersUrl = `${baseUrl}customers/`;
         const fetchConfig = {
             method: "post",
+            mode: 'cors',
             body: JSON.stringify(data),
             headers: {
                 'Content-Type': 'application/json',
-            }
+            },
+            body: JSON.stringify(newAutoData),
         }
         const response = await fetch(customersUrl, fetchConfig);
         if (response.ok) {

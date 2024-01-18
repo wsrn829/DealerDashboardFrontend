@@ -35,8 +35,9 @@ export const TechnicianForm = () => {
     const createTechUrl = `${baseUrl}technicians/`;
     const fetchConfig = {
       method: "post",
-      body: JSON.stringify(newTechData),
+      mode: 'cors',
       headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(newTechData),
     };
 
     const response = await fetch(createTechUrl, fetchConfig);

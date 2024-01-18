@@ -56,10 +56,11 @@ function SalesForm({ getSales }) {
         const saleUrl = `${salesUrl}sales/`;
         const fetchConfig = {
           method: "post",
-          body: JSON.stringify(data),
+          mode: 'cors',
           headers: {
             'Content-Type': 'application/json',
           },
+          body: JSON.stringify(data),
         };
 
         const response = await fetch(saleUrl, fetchConfig);
