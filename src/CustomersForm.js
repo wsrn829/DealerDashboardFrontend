@@ -47,7 +47,6 @@ export default function CustomersForm({ getCustomers }) {
             headers: {
                 'Content-Type': 'application/json',
             },
-            body: JSON.stringify(newAutoData),
         }
         const response = await fetch(customersUrl, fetchConfig);
         if (response.ok) {
