@@ -26,7 +26,6 @@ export default function ManufacturerForm() {
     headers: {
       "Content-Type": "application/json",
     },
-    body: JSON.stringify(newAutoData),
   };
 
   const handleSubmit = async (event) => {
