@@ -46,6 +46,7 @@ export default function CustomersForm({ getCustomers }) {
             body: JSON.stringify(data),
             headers: {
                 'Content-Type': 'application/json',
+                'Accept': 'application/json',
             },
         }
         const response = await fetch(customersUrl, fetchConfig);
@@ -67,6 +68,7 @@ export default function CustomersForm({ getCustomers }) {
                 setCustomers(customers);
               }
             }
+            getCustomers();
         }
     }
     return (

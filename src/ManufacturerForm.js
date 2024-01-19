@@ -22,10 +22,10 @@ export default function ManufacturerForm() {
   const fetchConfig = {
     method: "post",
     mode: 'cors',
-    body: JSON.stringify(data),
     headers: {
       "Content-Type": "application/json",
     },
+    body: JSON.stringify(data),
   };
 
   const handleSubmit = async (event) => {

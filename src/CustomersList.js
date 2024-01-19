@@ -12,6 +12,8 @@ function CustomersList() {
       if (response.ok) {
           const data = await response.json()
           setCustomer(data.customer)
+      } else {
+          console.error(`Error: ${response.status}`);
       }
     }
 
