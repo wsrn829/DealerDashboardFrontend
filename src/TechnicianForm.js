@@ -6,8 +6,8 @@ export const TechnicianForm = () => {
   const [employeeId, setEmployeeId] = useState("");
 
   const baseUrl = process.env.NODE_ENV === 'production'
-  ? 'https://dealer-dashboard-8d7b3aea3ae7.herokuapp.com/'
-  : 'http://localhost:8000/';
+  ? 'https://dealerdashboardserviceapi-db6bf25312d7.herokuapp.com/'
+  : 'http://localhost:8080/';
 
   //   Handle change within input
   const changeFirstName = (e) => {

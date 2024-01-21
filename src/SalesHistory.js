@@ -21,7 +21,7 @@ export default function SalesHistory() {
 
   // Postman shows 200 OK
   const baseUrl = process.env.NODE_ENV === 'production'
-  ? 'https://dealer-dashboard-8d7b3aea3ae7.herokuapp.com/'
+  ? 'https://dealerdashboardsalesapi-f1c2cc0024f6.herokuapp.com/'
   : 'http://localhost:8090/';
 
   async function LoadSales() {

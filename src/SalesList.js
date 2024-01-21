@@ -5,7 +5,7 @@ function SalesList() {
     const [sale, setSale] = useState([]);
 
     const baseUrl = process.env.NODE_ENV === 'production'
-    ? 'https://dealer-dashboard-8d7b3aea3ae7.herokuapp.com/'
+    ? 'https://dealerdashboardsalesapi-f1c2cc0024f6.herokuapp.com/'
     : 'http://localhost:8090/';
 
     // Postman shows 200 OK

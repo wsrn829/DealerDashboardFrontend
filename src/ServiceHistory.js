@@ -5,7 +5,7 @@ export const ServiceHistory = () => {
   const [appointments, setAppointments] = useState([]);
 
   const baseUrl = process.env.NODE_ENV === 'production'
-  ? 'https://dealer-dashboard-8d7b3aea3ae7.herokuapp.com/'
+  ? 'https://dealerdashboardserviceapi-db6bf25312d7.herokuapp.com/'
   : 'http://localhost:8080/';
 
   // Postman shows 200 OK
