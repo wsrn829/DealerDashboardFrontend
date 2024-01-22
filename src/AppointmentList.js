@@ -5,7 +5,7 @@ export const AppointmentList = () => {
 
   const baseUrl = process.env.NODE_ENV === 'production'
   ? 'https://dealerdashboardserviceapi-db6bf25312d7.herokuapp.com/'
-  : 'http://localhost:8000/';
+  : 'http://localhost:8080/';
 
   // Postman shows 200 OK
   useEffect(() => {
