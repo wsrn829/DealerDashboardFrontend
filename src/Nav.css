@@ -1,0 +1,96 @@
+nav {
+    background-color: transparent;
+    font: 17px "Helvetica Neue", Helvetica, Arial, sans-serif;
+    padding-left: 75px;
+    background: none;
+  }
+  
+  .navbar a:hover {
+    background-color: #5D5484;
+  }
+  
+  .navbar-light .navbar-nav .nav-link {
+    color: white;
+  }
+  
+  .navbar-brand {
+    display: flex;
+    align-items: center;
+    font-size:55px;
+    background: -webkit-linear-gradient(yellow, purple);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+    font-family:'Franklin Gothic Medium';
+    margin-bottom: 15px;
+  }
+  
+  .dropdown-header {
+    font-weight: bold;
+    color: black;
+  }
+  
+  .dropdown-menu {
+    min-width: 200px;
+    background-color: #3a4b73;
+    color: #ffffff;
+  }
+  
+  .dropdown-menu.columns-2 {
+    min-width: 400px;
+  }
+  
+  .dropdown-menu.columns-3 {
+    min-width: 600px;
+  }
+  
+  .dropdown-menu li a {
+    padding: 5px 15px;
+    font-weight: 300;
+  }
+  
+  .multi-column-dropdown {
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+  }
+  
+  .multi-column-dropdown li a {
+    display: block;
+    clear: both;
+    white-space: normal;
+  }
+  
+  .dropdown-menu.show a.dropdown-item:hover {
+    background-color: #5D5484;
+  }
+  
+  .dropdown-menu .dropdown-item,
+  .dropdown-menu .dropdown-header {
+    color: white;
+  }
+  
+  .btn-check:active + .btn-secondary,
+  .btn-check:checked + .btn-secondary,
+  .btn-secondary.active,
+  .btn-secondary:active,
+  .show > .btn-secondary.dropdown-toggle,
+  .transparent-button.btn.btn-secondary {
+    color: #fff;
+    background-color: transparent;
+    border: none;
+  }
+  
+  .navbar-light .navbar-nav .nav-link.active,
+  .navbar-light .navbar-nav .show > .nav-link {
+    color: #fff;
+    border: none;
+  }
+  
+  .dropdown-item.active,
+  .dropdown-item:active {
+    color: #fff;
+    text-decoration: none;
+    background-color: transparent;
+  }
+  
