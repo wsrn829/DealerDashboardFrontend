@@ -175,7 +175,7 @@ function Nav() {
                 <NavLink className="nav-link active" to="/">Home</NavLink>
               </li>
 
-              <li className="nav-item dropdown">
+              {/* <li className="nav-item dropdown">
                 <NavLink className="nav-link dropdown-toggle" to="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 Manufacturers
                 </NavLink>
@@ -203,9 +203,9 @@ function Nav() {
                 <li><NavLink className="dropdown-item" to="/automobiles/create">Add Automobile</NavLink></li>
                 <li><NavLink className="dropdown-item" to="/automobiles">Automobiles</NavLink></li>
               </ul>
-            </li>
+            </li> */}
 
-          {/* <li className="nav-item dropdown">
+          <li className="nav-item dropdown">
             <NavLink className="nav-link dropdown-toggle" to="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Inventory
             </NavLink>
@@ -219,9 +219,9 @@ function Nav() {
               <li><NavLink className="dropdown-item" to="/automobiles/create">Add Automobile</NavLink></li>
               <li><NavLink className="dropdown-item" to="/automobiles">Automobiles</NavLink></li>
             </ul>
-          </li> */}
+          </li>
 
-            <li className="nav-item dropdown">
+            {/* <li className="nav-item dropdown">
               <NavLink className="nav-link dropdown-toggle" to="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 Technicians
               </NavLink>
@@ -241,9 +241,9 @@ function Nav() {
                 <li><NavLink className="dropdown-item" to="/appointments">Service Appointments</NavLink></li>
                 <li><NavLink className="dropdown-item" to="/appointments/history">Service History</NavLink></li>
               </ul>
-            </li>
+            </li> */}
 
-            {/* <li className="nav-item dropdown">
+            <li className="nav-item dropdown">
               <NavLink className="nav-link dropdown-toggle" to="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 Services
               </NavLink>
@@ -255,9 +255,9 @@ function Nav() {
                 <li><NavLink className="dropdown-item" to="/appointments">Service Appointments</NavLink></li>
                 <li><NavLink className="dropdown-item" to="/appointments/history">Service History</NavLink></li>
               </ul>
-            </li> */}
+            </li>
 
-            <li className="nav-item dropdown">
+            {/* <li className="nav-item dropdown">
               <NavLink className="nav-link dropdown-toggle" to="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 Salespeople
               </NavLink>
@@ -286,9 +286,9 @@ function Nav() {
               <li><NavLink className="dropdown-item" to="/sales/">Sales</NavLink></li>
               <li><NavLink className="dropdown-item" to="/sales/history">Salesperson History</NavLink></li>
             </ul>
-          </li>
+          </li> */}
 
-          {/* <li className="nav-item dropdown">
+          <li className="nav-item dropdown">
             <NavLink className="nav-link dropdown-toggle" to="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Sales
             </NavLink>
@@ -303,7 +303,7 @@ function Nav() {
               <li><NavLink className="dropdown-item" to="/sales/">Sales</NavLink></li>
               <li><NavLink className="dropdown-item" to="/sales/history">Salesperson History</NavLink></li>
             </ul>
-          </li> */}
+          </li>
 
           </ul>
         </div>
