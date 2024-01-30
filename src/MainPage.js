@@ -1,17 +1,20 @@
-import React from 'react';
+
+import React, { useEffect, useState } from "react";
+import "./MainPage.css";
 
 function MainPage() {
   return (
-    <div className="px-4 py-5 my-5 text-center">
-      <h1 className="display-5 fw-bold">DealerDashboard</h1>
-      <div className="col-lg-6 mx-auto">
-        <p className="lead mb-6">
-          The premiere solution for automobile dealership
-          management!
-        </p>
+    <div className="content">
+      <div className="text-content">
+        <h2 className="display-8 fw-bold">
+        The ultimate solution for automotive dealership management!
+        </h2>
       </div>
-    </div>
-  );
-}
+      <div className="image-content">
+        <img src="main.png" alt="car" className="responsive-image" />
+      </div>
+  </div>
+  )
+};
 
 export default MainPage;

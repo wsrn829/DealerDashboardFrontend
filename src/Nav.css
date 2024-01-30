@@ -1,11 +1,12 @@
 nav {
-    background-color: transparent;
+    background-color: darkcyan;
     font: 17px "Helvetica Neue", Helvetica, Arial, sans-serif;
-    padding-left: 75px;
-    background: none;
+    padding-left: 50px;
+    background: darkcyan;
   }
   
-  .navbar a:hover {
+  .navbar li a:hover {
+    font-weight: bold;
     background-color: #5D5484;
   }
   
@@ -15,9 +16,8 @@ nav {
   
   .navbar-brand {
     display: flex;
-    align-items: center;
-    font-size:55px;
-    background: -webkit-linear-gradient(yellow, purple);
+    font-size:50px;
+    background: -webkit-linear-gradient(yellow, #8B008B);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-weight: bold;
@@ -25,15 +25,12 @@ nav {
     margin-bottom: 15px;
   }
   
-  .dropdown-header {
-    font-weight: bold;
-    color: black;
-  }
   
   .dropdown-menu {
     min-width: 200px;
     background-color: #3a4b73;
     color: #ffffff;
+    font-weight: bold;
   }
   
   .dropdown-menu.columns-2 {
@@ -93,4 +90,3 @@ nav {
     text-decoration: none;
     background-color: transparent;
   }
-  
