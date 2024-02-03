@@ -14,26 +14,27 @@ body {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
-  align-items: center; 
+  align-items: flex-start; 
   justify-content: flex-start;
+  padding-left: 5px;
 }
 
 .text-content {
     flex: 0 0 50%;
     padding-left: 0px;
-    margin-bottom: 40px;
+    margin-bottom: 55px;
     margin-left: 0px;
     margin-top: 60px;
     text-align: left;
-    max-width: 700px;
+    max-width: 750px;
   }
 
-.image-content img {
+  .image-content img {
     max-width: 100%;
     background-color: transparent;
     height: auto; /* maintain aspect ratio */
-    border-radius: 50%;
-    box-shadow: 0 20px 20px 0 rgba(30, 28, 28, 0.2);
+    border-radius: 3%;
+    box-shadow: 10px 10px 15px rgba(46, 95, 95, 0.5);
 }
 
 
