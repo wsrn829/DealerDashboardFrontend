@@ -6,7 +6,7 @@ function MainPage() {
   return (
     <div className="content">
       <div className="text-content">
-        <h2 className="display-8 fw-bold">
+        <h2 className="display-8">
         The ultimate solution for automotive dealership management!
         </h2>
       </div>

@@ -22,13 +22,13 @@ function Nav() {
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
 
               <li className="nav-item">
-                <NavLink className="nav-link active" to="/">Home</NavLink>
+                <NavLink className="nav-link active" to="/">HOME</NavLink>
               </li>
 
 
           <li className="nav-item dropdown">
             <NavLink className="nav-link dropdown-toggle" to="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Inventory
+              INVENTORY
             </NavLink>
             <ul className="dropdown-menu">
               <li><NavLink className="dropdown-item" to="/manufacturers/create">Add Manufacturer</NavLink></li>
@@ -66,7 +66,7 @@ function Nav() {
 
             <li className="nav-item dropdown">
               <NavLink className="nav-link dropdown-toggle" to="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Services
+                SERVICES
               </NavLink>
               <ul className="dropdown-menu">
                 <li><NavLink className="dropdown-item" to="/technicians/create">Add Technician</NavLink></li>
@@ -80,7 +80,7 @@ function Nav() {
 
           <li className="nav-item dropdown">
             <NavLink className="nav-link dropdown-toggle" to="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Sales
+              SALES
             </NavLink>
             <ul className="dropdown-menu">
               <li><NavLink className="dropdown-item" to="/salespeople/create">Add Salesperson</NavLink></li>

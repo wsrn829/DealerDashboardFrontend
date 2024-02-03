@@ -1,7 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
+
+
 nav {
     background-color: darkcyan;
-    font: 17px "Helvetica Neue", Helvetica, Arial, sans-serif;
-    padding-left: 50px;
+    font: 20px "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: bold;
     background: darkcyan;
   }
   
@@ -12,19 +20,9 @@ nav {
   
   .navbar-light .navbar-nav .nav-link {
     color: white;
-  }
-  
-  .navbar-brand {
-    display: flex;
-    font-size:50px;
-    background: -webkit-linear-gradient(yellow, #8B008B);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
     font-weight: bold;
-    font-family:'Franklin Gothic Medium';
-    margin-bottom: 15px;
   }
-  
+
   
   .dropdown-menu {
     min-width: 200px;
@@ -90,3 +88,52 @@ nav {
     text-decoration: none;
     background-color: transparent;
   }
+
+  .navbar-brand {
+    display: flex;
+    font-size: 60px;
+    background: -webkit-linear-gradient(yellow, purple);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+    font-family:'Roboto';
+  }
+
+
+@media screen and (max-width: 991px) {
+  nav {
+    background-color: darkcyan;
+    font: 18px "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background: darkcyan;
+  }
+
+  .navbar-brand {
+    display: flex;
+    font-size:30px;
+    background: -webkit-linear-gradient(yellow, #8B008B);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+    font-family:'Roboto';
+}
+}
+
+@media screen and (max-width: 767px) {
+  nav {
+    background-color: darkcyan;
+    font: 16px "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background: darkcyan;
+  }
+  .navbar-brand {
+    display: flex;
+    font-size:35px;
+    background: -webkit-linear-gradient(yellow, #8B008B);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+    font-family:'Roboto';
+  }
+}
+
+
+
