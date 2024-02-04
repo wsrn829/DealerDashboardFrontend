@@ -48,7 +48,7 @@ function SalesForm({ getSales }) {
         const data = {};
         data.price = price;
         data.customer = customer;
-        data.automobile = {vin: automobile};
+        data.automobile = automobile;
         data.salesperson = salesperson;
         console.log(data)
 
@@ -187,7 +187,7 @@ function SalesForm({ getSales }) {
                 <div className="form-floating mb-3">
                 Price
                 <input onChange = {handlePriceChange} value={price} placeholder="price" required type="number" name="price" id="price" className="form-control"/>
-                <label htmlFor="Price"></label>
+                <label htmlFor="price"></label>
               </div>
 
               <button className="btn btn-primary">Create</button>
