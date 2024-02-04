@@ -48,7 +48,7 @@ function SalesForm({ getSales }) {
         const data = {};
         data.price = price;
         data.customer = customer;
-        data.automobile = {vin: automobile};
+        data.automobile = automobile;
         data.salesperson = salesperson;
         console.log(data)
 
