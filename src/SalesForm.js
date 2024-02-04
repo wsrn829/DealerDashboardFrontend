@@ -48,7 +48,7 @@ function SalesForm({ getSales }) {
         const data = {};
         data.price = price;
         data.customer = customer;
-        data.automobile = automobile;
+        data.automobile = {vin: automobile};
         data.salesperson = salesperson;
         console.log(data)
 
@@ -127,11 +127,11 @@ function SalesForm({ getSales }) {
 
           newAutomobiles.push(automobiles[i])
 
-  // let messageClasses = 'alert alert-success d-none mb-0';
+  let messageClasses = 'alert alert-success d-none mb-0';
   let formClasses = '';
 
   if (formSubmitted) {
-    // messageClasses = 'alert alert-success mb-0';
+    messageClasses = 'alert alert-success mb-0';
     formClasses = 'd-none';
   }
 
@@ -192,9 +192,9 @@ function SalesForm({ getSales }) {
 
               <button className="btn btn-primary">Create</button>
             </form>
-              {/* <div className={messageClasses} id="success-message">
+              <div className={messageClasses} id="success-message">
                   Congratulations!
-                </div> */}
+                </div>
           </div>
         </div>
       </div>
