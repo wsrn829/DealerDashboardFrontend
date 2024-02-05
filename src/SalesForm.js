@@ -1,88 +1,82 @@
 import React, {useEffect, useState} from 'react';
 
-const salesUrl = process.env.NODE_ENV === 'production'
-  ? 'https://dealerdashboardsalesapi-f1c2cc0024f6.herokuapp.com/'
-  : 'http://localhost:8090/';
-
 const inventoryUrl = process.env.NODE_ENV === 'production'
   ? 'https://dealer-dashboard-8d7b3aea3ae7.herokuapp.com/'
   : 'http://localhost:8100/';
 
+const salesUrl = process.env.NODE_ENV === 'production'
+  ? 'https://dealerdashboardsalesapi-f1c2cc0024f6.herokuapp.com/'
+  : 'http://localhost:8090/';
 
-function SalesForm({ getSales }) {
 
-    const [price, setPrice] = useState('');
-    const [customer, setCustomer] = useState("");
-    const [customers, setCustomers] = useState([]);
+function SalesForm() {
     const [automobile, setAutomobile] = useState('');
     const [automobiles, setAutomobiles] = useState([]);
     const [salesperson, setSalesperson] = useState("");
     const [salespeople, setSalespeople] = useState([]);
+    const [customer, setCustomer] = useState("");
+    const [customers, setCustomers] = useState([]);
+    const [price, setPrice] = useState('');
     const [sales, setSales] = useState([]);
     const [formSubmitted, setFormSubmitted] = useState(false);
 
-
-    const handlePriceChange = (event) => {
-        const value = event.target.value;
-        setPrice(value);
-      }
-
-    const handleCustomerChange = (event) => {
-        const value = event.target.value;
-        setCustomer(value);
-      }
 
     const handleAutomobileChange = (event) => {
         const value = event.target.value;
         setAutomobile(value);
       }
-
     const handleSalespersonChange = (event) => {
         const value = event.target.value;
         setSalesperson(value);
       }
-
+    const handleCustomerChange = (event) => {
+        const value = event.target.value;
+        setCustomer(value);
+      }
+    const handlePriceChange = (event) => {
+        const value = event.target.value;
+        setPrice(value);
+      }
 
     const handleSubmit = async (event) => {
         event.preventDefault();
-        const data = {};
-        data.price = price;
-        data.customer = customer;
-        data.automobile = automobile;
-        data.salesperson = salesperson;
-        console.log(data)
 
+        const data = {
+          automobile: automobile,
+          salesperson: salesperson,
+          customer: customer,
+          price: price
+        };
+        console.log(data);
 
-        const saleUrl = `${salesUrl}sales/`;
         const fetchConfig = {
-          method: "post",
-          mode: 'cors',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify(data),
+            method: "post",
+            body: JSON.stringify(data),
+            mode: 'cors',
+            headers: {
+              'Content-Type': 'application/json',
+            },
         };
 
+        const saleUrl = `${salesUrl}sales/`;
         const response = await fetch(saleUrl, fetchConfig);
         const test = await response.json();
         console.log(test);
         if (response.ok) {
-          const newSale = await response.json();
-          console.log(newSale);
+            const newSale = await response.json();
+            console.log(newSale);
+            setPrice('');
+            setCustomer('');
+            setAutomobile('');
+            setSalesperson('');
+            setFormSubmitted(true);
+          }
+    }
 
-          setPrice('');
-          setCustomer('');
-          setAutomobile('');
-          setSalesperson('');
-          setFormSubmitted(true);
-        }
-      }
-
-    // Postman show 200 OK
     const fetchData = async () => {
-    const url = `${salesUrl}salespeople/`;
-    const url1 = `${salesUrl}customers/`;
-    const url2 = `${inventoryUrl}automobiles/`;
+    const url = `${inventoryUrl}automobiles/`;
+    const url1 = `${salesUrl}salespeople/`;
+    const url2 = `${salesUrl}customers/`;
     const url3 = `${salesUrl}sales/`;
 
     const response = await fetch(url);
@@ -92,17 +86,17 @@ function SalesForm({ getSales }) {
 
     if (response.ok) {
         const data = await response.json();
-        setSalespeople(data.salesperson)
+        setAutomobiles(data.autos)
     }
     if (response1.ok) {
         const data1 = await response1.json();
-        setCustomers(data1.customer)
+        setSalespeople(data1.salesperson)
       }
     if (response2.ok) {
         const data2 = await response2.json();
-        setAutomobiles(data2.autos)
+        setCustomers(data2.customer)
       }
-      if (response3.ok) {
+    if (response3.ok) {
         const data3 = await response3.json();
         setSales(data3.sale)
       }
@@ -113,19 +107,19 @@ function SalesForm({ getSales }) {
   }, []);
 
 
-  let soldVinList = []
-  let newAutomobiles = []
+  // let soldVinList = []
+  // let newAutomobiles = []
 
 
-  for (let i = 0; i < sales.length; i++)
+  // for (let i = 0; i < sales.length; i++)
 
-          soldVinList.push(sales[i]["automobile"]["vin"])
+  //         soldVinList.push(sales[i]["automobile"]["vin"])
 
-  for (let i = 0; i < automobiles.length; i++)
+  // for (let i = 0; i < automobiles.length; i++)
 
-      if (soldVinList.includes(automobiles[i]["vin"]) === false)
+  //     if (soldVinList.includes(automobiles[i]["vin"]) === false)
 
-          newAutomobiles.push(automobiles[i])
+  //         newAutomobiles.push(automobiles[i])
 
   let messageClasses = 'alert alert-success d-none mb-0';
   let formClasses = '';
@@ -146,7 +140,7 @@ function SalesForm({ getSales }) {
                   Automobile VIN
                     <select onChange = {handleAutomobileChange} value={automobile} required id="automobile" name="automobile" className="form-select">
                     <option value="">Choose an automobile VIN...</option>
-                    {newAutomobiles.map(automobile => {
+                    {automobiles?.map(automobile => {
                         return (
                         <option key={automobile.id} value={automobile.vin}>
                         {automobile.vin}
