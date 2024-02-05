@@ -60,8 +60,7 @@ function SalesForm() {
 
         const saleUrl = `${salesUrl}sales/`;
         const response = await fetch(saleUrl, fetchConfig);
-        const test = await response.json();
-        console.log(test);
+
         if (response.ok) {
             const newSale = await response.json();
             console.log(newSale);
